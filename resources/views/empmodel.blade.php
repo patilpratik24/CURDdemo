@@ -9,6 +9,8 @@
 </head>
 <body>
 
+
+
 {{-- Start Add Modal --}}
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -126,6 +128,7 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-primary">DELETE</button>
+        <br>
       </div>
     </form> 
     </div>
@@ -133,11 +136,8 @@
 </div>
 {{-- End Delete Modal --}}
 
-
-
-
   <div class="container">
-    <h1>With Bootstrap modal</h1>
+  
     @if(count($errors)>0)]
 
     <div class="alert alert-danger">
@@ -154,9 +154,12 @@
               <p>{{\Session::get('success')}}</p>
             </div>
           @endif
-
+          <br><br>
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
             Add Data 
+         </button>
+         <button type="button" class="btn btn-primary" onclick="window.location='{{ url("/home") }}'">
+            Back to Dashboard 
          </button>
 
          <br><br>
